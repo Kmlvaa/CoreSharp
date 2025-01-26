@@ -11,6 +11,7 @@
 
             while (true)
             {
+                #region size validation
                 while (true)
                 {
                     Console.Write("Please select the size: ");
@@ -20,6 +21,7 @@
                     else Console.WriteLine("Size is improper!");
                     Console.WriteLine("-------------------------");
                 }
+                #endregion
 
                 Console.Write("Please select the color of the shoes: ");
                 string? color = Console.ReadLine();
