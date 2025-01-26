@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Core.NotificationModule
 {
-    internal class template
+    internal class Template
     {
     }
 }
+ 
