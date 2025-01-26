@@ -8,5 +8,7 @@ namespace Core
 {
     internal class Account
     {
+
+
     }
 }
