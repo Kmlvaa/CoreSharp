@@ -7,11 +7,19 @@
             Console.WriteLine("Welcome to ShoesCenter");
             Console.WriteLine("-------------------------");
             decimal totalProcutsAmount = 0;
+            int size = 0;
 
             while (true)
             {
-                Console.Write("Please select the size: ");
-                int size = int.Parse(Console.ReadLine());
+                while (true)
+                {
+                    Console.Write("Please select the size: ");
+                    size = int.Parse(Console.ReadLine());
+
+                    if (size >= 30 && size <= 50) break;
+                    else Console.WriteLine("Size is improper!");
+                    Console.WriteLine("-------------------------");
+                }
 
                 Console.Write("Please select the color of the shoes: ");
                 string? color = Console.ReadLine();
@@ -34,9 +42,10 @@
 
                 totalProcutsAmount += totalAmount;
 
-                if(clientAnswer == "No")
+                if (clientAnswer == "No")
                 {
-                    Console.WriteLine(totalProcutsAmount);
+                    Console.WriteLine("---------------------------------------");
+                    Console.WriteLine($"Total amount: {totalProcutsAmount}");
                     break;
                 }
             }
