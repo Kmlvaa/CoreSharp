@@ -61,3 +61,21 @@ if(empl1 is null)
 {
     Console.WriteLine("null");
 }
+
+
+
+#region Ref Out
+int number = 5;
+ShowNum(ref /*out*/ number);
+Console.WriteLine(number);
+
+void ShowNum(ref /*out*/ int num) //burada num'a referans type xususiyyetini menimsetdik, yeni numda olan deyisiklik numbere da olunacaq
+{
+    num = 10;
+    Console.WriteLine(num);
+}
+
+//ref ve out eyni funksiyani yerine yetirir, ferqleri ondan ibaretdirki ref isletsek numbere mutleq en basda deyer menimsedilmelidir
+//out da ise bu sert deyil, lakin outda argument kimi gonderilen methodun icerisinde deyer mutleq menimsedilmelidir
+//array referance typedir, lakin bezen ref keywordu istifade olunur. buna sebeb initial deyerini mutleq teyin etmek lazimliligidir
+#endregion
