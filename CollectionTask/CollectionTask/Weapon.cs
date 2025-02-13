@@ -1,5 +1,6 @@
 ﻿using System;
 using CollectionTask.Enum;
+using CollectionTask.Helper;
 
 namespace CollectionTask
 {
@@ -26,8 +27,10 @@ namespace CollectionTask
             else throw new NullReferenceException("Bullet count is 0. Refill the weapon.");
 
             Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("BOOMM!!!");
             Console.WriteLine($"Weapon: {Name} || Bullet type: {BulletType} || Bullet left: {Bullets.Count}");
             Console.ResetColor();
+            //Colored.ChangeColor(ConsoleColor.Cyan, $"Weapon: {Name} || Bullet type: {BulletType} || Bullet left: {Bullets.Count}");
         }
         public void Fill()
         {
